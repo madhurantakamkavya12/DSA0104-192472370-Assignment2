@@ -9,12 +9,14 @@ void byValue(double fee, int percent)
 
 void byReference(double& fee, int percent)
 {
-    // We'll complete this function in the next step.
+    fee = fee - fee * percent / 100;
+    cout << "Inside byReference: " << fee << '\n';
 }
 
 void byPointer(double* fee, int percent)
 {
-    // We'll complete this function in the next step.
+    *fee = *fee - *fee * percent / 100;
+    cout << "Inside byPointer: " << *fee << '\n';
 }
 
 int main()
